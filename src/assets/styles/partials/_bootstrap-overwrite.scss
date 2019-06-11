@@ -1,0 +1,10 @@
+.nav-item, .navbar-brand{
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      font-weight: bold;
+      transition: ease 0.5s;
+    }
+  }
+}
