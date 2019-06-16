@@ -52,7 +52,7 @@ export default {
     position: absolute;
     right: 36px;
     top: 45%;
-    font-size: 25px;
+    font-size: $font24;
   }
 }
 
@@ -60,7 +60,7 @@ export default {
   display: none;
   @media screen and (max-width: $screen-width-s) {
     display: flex;
-    font-size: 20px;
+    font-size: $font20;
     .icon {
       padding: 0 20px;
     }

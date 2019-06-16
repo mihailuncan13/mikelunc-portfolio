@@ -2,6 +2,8 @@ import Vue from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSearch,
+  faCameraRetro as fasCameraRetro,
+  faVideo,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { 
@@ -13,6 +15,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // solid
 library.add(faSearch);
+library.add(fasCameraRetro);
+library.add(faVideo);
 
 //brands
 library.add(fabTwitter);

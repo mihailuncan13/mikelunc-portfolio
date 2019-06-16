@@ -21,6 +21,12 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
 }
 
 </style>

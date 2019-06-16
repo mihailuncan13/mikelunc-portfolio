@@ -51,10 +51,9 @@ export default {
 
   .logo {
     position: absolute;
-    font-size: 40px;
+    font-size: $font20;
     top: 36px;
     left: 36px;
-    font-size: 20px;
   }
 
   .wrapper {
@@ -64,7 +63,7 @@ export default {
     max-width: 40%;
 
     .small-text {
-      font-size: 20px;
+      font-size: $font20;
       text-transform: uppercase;
       color: $light-gray;
       font-weight: bold;
@@ -72,7 +71,7 @@ export default {
     }
 
     .big-text {
-      font-size: 50px;
+      font-size: $font48;
       font-weight: bold;
       line-height: 1.2em;
       text-align: start;

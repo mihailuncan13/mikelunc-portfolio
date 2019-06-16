@@ -10,8 +10,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/include.scss';
+
   .projects {
-    background-color: gold;
+    background-color: $black;
     height: 100vh;
   }
 </style>
