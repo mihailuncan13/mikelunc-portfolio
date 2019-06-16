@@ -1,36 +1,33 @@
 <template lang="pug">
-  .navigation
-    b-navbar(toggleable='lg', type='dark', variant='danger')
-      b-navbar-brand 
-        router-link(:to="{ name:'Home' }") Mike Lunc.
-      b-navbar-toggle(target='nav-collapse')
-      b-collapse#nav-collapse(is-nav='')
-        b-navbar-nav
-          b-nav-item
-            router-link(:to="{ name:'Home' }") Home
-          b-nav-item
-            router-link(:to="{ name:'Projects' }") Projects
-          b-nav-item
-            router-link(:to="{ name:'About' }") About
-          b-nav-item
-            router-link(:to="{ name:'Contact' }") Contact
-
+  Slide(:right="true")
+    a(@click="scrollTo('#home', 1000)")
+      span Home
+    a(@click="scrollTo('#about', 1000)")
+      span About
+    a(@click="scrollTo('#services', 1000)")
+      span Services
+    a(@click="scrollTo('#projects', 1000)")
+      span Projects
+    a(@click="scrollTo('#contact', 1000)")
+      span Contact
+    Social(:isNavbar="true")
 </template>
 
 <script>
+import { Slide } from 'vue-burger-menu'
+import { doScrolling } from '@/utils/scrollUtil';
+import Social from '@/components/Social'
+
 export default {
   name: 'Navigation',
+
+  components: { Slide, Social },
+
+  methods: {
+    scrollTo(elem, time) {
+      return doScrolling(elem, time)
+    }
+  },
 }
-
-
 </script>
-
-
-<style lang="scss" scoped>
-  @import '../assets/styles/include.scss';
-
-  .navigation {
-    position: fixed;
-  }
-</style>
 

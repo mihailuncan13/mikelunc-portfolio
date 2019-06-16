@@ -1,0 +1,67 @@
+//Bootstrap
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 0;
+  font-weight: 500;
+
+  @media screen and (max-width: $screen-width-s) {
+    padding: 0.6rem 1rem;
+  }
+
+  &.btn-secondary {
+    background-color: #ffffff10;
+    border: 2px solid $white;
+
+    &:hover {
+      background-color: $hard-red;
+      border-color: $hard-red;
+    }
+  }
+}
+
+//Burger menu
+
+.bm-burger-button {
+  position: fixed;
+}
+
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  span {
+    text-decoration: none;
+    color: $white;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover:first-letter {
+      color: $hard-red;
+    }
+  }
+}
+
+.bm-burger-button {
+  @media screen and (max-width: $screen-width-s) {
+    width: 26px;
+    height: 20px;
+  }
+
+  .bm-burger-bars {
+    background-color: $white;
+  }
+
+  &:hover {
+    .bm-burger-bars {
+      background-color: $hard-red;
+      transition: 0.2s ease-in;
+    }
+  }
+}
+
+.bm-menu {
+  background-color: $black;
+}
+

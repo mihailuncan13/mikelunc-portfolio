@@ -1,20 +1,18 @@
 <template lang="pug">
-  .about
-    h1 About
+  .services
+    h1 Services
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'Services'
 }
 </script>
 
 <style lang="scss" scoped>
-  .about {
-    background-color: pink;
+  .services {
+    background-color: orange;
     height: 100vh;
   }
 </style>
-
-
 

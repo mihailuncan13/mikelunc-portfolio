@@ -1,0 +1,16 @@
+@mixin smaller-font(){
+  span {
+    line-height: 1;
+    display: inline-block;
+    white-space: pre-wrap;
+    @media screen and (max-width: $screen-width-xl){
+      font-size: 0.85em;
+    }
+    @media screen and (max-width: $screen-width-m){
+      font-size: 0.75em;
+    }
+    @media screen and (max-width: $screen-width-xxs){
+      font-size: 0.65em;
+    }
+  }
+}

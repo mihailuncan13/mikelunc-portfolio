@@ -1,48 +1,95 @@
 <template lang="pug">
-  #home
-    .parallax
-    .info#section1(ref="section1")
-      p Scroll Up and Down this page to see the parallax scrolling effect.
-      p This div is just here to enable scrolling.
-      p Tip: Try to remove the background-attachment property to remove the scrolling effect.
-    .info#section2(ref="section2")
-      p Scroll Up and Down this page to see the parallax scrolling effect.
-      p This div is just here to enable scrolling.
-      p Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  .home
+    Parallax(:sectionHeight="100")
+      .parallax-cover
+    .logo
+      span Mike Lunc.
+    .wrapper
+      .small-text.mb-2
+        span {{ textHome.home_small_text }}
+      .big-text.mb-4
+        span {{ textHome.home_big_text }}
+      b-button(@click="scrollTo('#contact', 1000)") Let's talk
+    Social(:isNavbar="false")
 </template>
 
 <script>
+import Parallax from 'vue-parallaxy'
+import { textHome } from '@/utils/textUtil'
+import { doScrolling } from '@/utils/scrollUtil';
+import Social from '@/components/Social'
+
 export default {
   name: 'Home',
+
+  components: { Parallax, Social },
+
+  data() {
+    return {
+      textHome,
+    }
+  },
+
+    methods: {
+    scrollTo(elem, time) {
+      return doScrolling(elem, time)
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
   @import '../../assets/styles/include.scss';
 
-  .parallax {
-    background: url('https://source.unsplash.com/hfk6xOjQlFk');
-    min-height: 100vh; 
-    background-attachment: fixed;
+  .parallax-cover {
+    background: url('../../assets/styles/images/cover.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
   }
 
-  .info {
-    text-align: center;
-    color: $white;
-    width: 100%;
+  .logo {
+    position: absolute;
+    font-size: 40px;
+    top: 36px;
+    left: 36px;
+    font-size: 20px;
   }
 
-  #section1 {
-    background-color: pink;
-    height: 100vh;
-  }
-  
-  #section2 {
-    background-color: aquamarine;
-    height: 100vh;
-  }
+  .wrapper {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    max-width: 40%;
 
+    .small-text {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $light-gray;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    .big-text {
+      font-size: 50px;
+      font-weight: bold;
+      line-height: 1.2em;
+      text-align: start;
+      @include smaller-font();
+    }
+    @media screen and (max-width: $screen-width-l) {
+      top: 10%;
+      left: 20px;
+      max-width: 90%;
+    }
+
+    @media screen and (max-width: $screen-width-s) {
+      top: 20%;
+      left: 20px;
+      max-width: 90%;
+    }
+  }
 </style>
+
+
