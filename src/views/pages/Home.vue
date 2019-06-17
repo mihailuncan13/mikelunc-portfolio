@@ -1,7 +1,7 @@
 <template lang="pug">
   .home
     Parallax(:sectionHeight="100")
-      .parallax-cover
+      .parallax-img
     .logo
       span Mike Lunc.
     .wrapper
@@ -39,21 +39,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../../assets/styles/include.scss';
-
-  .parallax-cover {
-    background: url('../../assets/styles/images/cover.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-  }
+@import '../../assets/styles/include.scss';
 
   .logo {
     position: absolute;
     font-size: $font20;
     top: 36px;
     left: 36px;
+  }
+
+  .parallax-img {
+    background: url('../../assets/styles/images/cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    height: 100%;
+    background-size: cover;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
   }
 
   .wrapper {

@@ -4,6 +4,8 @@ import {
   faSearch,
   faCameraRetro as fasCameraRetro,
   faVideo,
+  faLightbulb,
+  faShoePrints,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { 
@@ -17,6 +19,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faSearch);
 library.add(fasCameraRetro);
 library.add(faVideo);
+library.add(faLightbulb);
+library.add(faShoePrints);
 
 //brands
 library.add(fabTwitter);

@@ -1,1 +1,34 @@
+@import 'partials/mixins';
 
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.title_small {
+  font-size: $font24;
+  font-weight: bold;
+  color: $hard-red;
+}
+
+.title_big {
+  font-size: $font48;
+  font-weight: bold;
+  @include smaller-font();
+  span {
+    padding: 20px;
+    border-bottom: 1px solid $black;
+  }
+}

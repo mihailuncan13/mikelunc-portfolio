@@ -30,21 +30,21 @@ export default {
 @import '../../assets/styles/include.scss';
 
   .about {
-    background-color: $hard-red;
+    background-color: $black;
     text-align: center;
+    align-content: center;
+    min-height: 50vh;
+    @media screen and (max-width: $screen-width-s) {
+      padding: 10px;
+    }
 
     .title_small {
-      font-size: $font24;
-      font-weight: bold;
+      color: $hard-red;
     }
 
     .title_big {
-      font-size: $font48;
-      font-weight: bold;
-      @include smaller-font();
       span {
-        padding: 20px;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $hard-red;
       }
     }
 

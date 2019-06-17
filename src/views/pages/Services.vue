@@ -7,38 +7,25 @@
       b-col(lg="8" md="11" sm="11")
         .title_big.mb-5
           span {{textServices.about_big_text}}
-      b-col(lg="8" md="11" sm="11")
-        b-row(align-h="between")
-          b-col.service(lg="6")
-            b-row.mb-5
-              b-col.icon(cols="1")
-                font-awesome-icon(:icon="['fas', 'camera-retro']")
-              b-col
-                .service-title
-                  span {{ textServices.service_1_title }}
-                .description
-                  span {{ textServices.service_1_description }}
-          b-col.service(lg="6")
-            b-row.mb-5
-              b-col.icon(cols="1")
-                font-awesome-icon(icon="video")
-              b-col
-                .service-title
-                  span {{ textServices.service_2_title }}
-                .description
-                  span {{ textServices.service_2_description }}
+      b-col.service(lg="8" md="10")
+        b-col(v-for="item in service" lg="6" md="11" sm="11")
+          Service(:service="item")
 
 </template>
 
 <script>
-import { textServices } from '@/utils/textUtil'
+import { textServices, service } from '@/utils/textUtil'
+import Service from '@/components/Service'
 
 export default {
   name: 'Services',
 
+  components: { Service },
+
   data() {
     return {
       textServices,
+      service,
     }
   }
 }
@@ -52,19 +39,13 @@ export default {
     background-color: $white;
     text-align: center;
 
-    .title_small {
-      font-size: $font24;
-      font-weight: bold;
-      color: $hard-red;
+    @media screen and (max-width: $screen-width-s) {
+      padding: 10px;
     }
 
     .title_big {
-      font-size: $font48;
-      font-weight: bold;
-      @include smaller-font();
       span {
-        padding: 20px;
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid $hard-red;
       }
     }
 
@@ -74,24 +55,11 @@ export default {
         font-size: $font20;
       }
     }
+  }
 
-    .service {
-      text-align: start;
-
-      .icon {
-        font-size: $font32;
-        color: $hard-red;
-      }
-
-      .service-title {
-        font-size: $font32;
-        font-weight: 500;
-      }
-
-      .description {
-        color: $gray;
-      }
-    }
+  .service {
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>
 
