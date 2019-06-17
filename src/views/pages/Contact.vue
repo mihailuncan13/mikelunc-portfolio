@@ -58,6 +58,11 @@ export default {
       align-content: center;
       align-items: center;
 
+      @media screen and (max-width: $screen-width-s) {
+        left: 8px;
+        width: 95%;
+      }
+
       .contact-card {
         position: absolute; 
         left: 0; 

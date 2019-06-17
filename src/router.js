@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from './views/pages/Index.vue'
 import Projects from './views/pages/Projects.vue'
+import ProjectView from './views/pages/ProjectView.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/projects',
       name: 'Projects',
       component: Projects,
+    },
+    {
+      path: '/projects/:projectId',
+      name: 'ProjectView',
+      component: ProjectView,
     },
   ]
 })

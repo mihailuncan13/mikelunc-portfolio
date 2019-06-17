@@ -8,13 +8,13 @@
         .title_big.mb-5
           span {{textServices.about_big_text}}
       b-col.service(lg="8" md="10")
-        b-col(v-for="item in service" lg="6" md="11" sm="11")
+        b-col(v-for="item in services" lg="6" md="11" sm="11")
           Service(:service="item")
 
 </template>
 
 <script>
-import { textServices, service } from '@/utils/textUtil'
+import { textServices, services } from '@/utils/textUtil'
 import Service from '@/components/Service'
 
 export default {
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       textServices,
-      service,
+      services,
     }
   }
 }

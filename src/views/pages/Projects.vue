@@ -7,18 +7,32 @@
       b-col(lg="8" md="11" sm="11")
         .title_big.mb-5
           span {{textProjects.about_big_text}}
+      b-col(lg="8" md="11" sm="11").mb-5
+        b-row(align-h="center")
+          .project-items(v-for="project in handleProjects")
+            Project(:project="project")
 
 </template>
 
 <script>
-import { textProjects } from '@/utils/textUtil';
+import { textProjects, projects } from '@/utils/textUtil';
+import Project from '@/components/Project';
 
 export default {
   name: 'Projects',
 
+  components: { Project },
+
   data() {
     return {
       textProjects,
+      projects,
+    }
+  },
+
+  computed: {
+    handleProjects() {
+      return this.projects.slice(0, 8);
     }
   }
 }
@@ -39,6 +53,10 @@ export default {
       span {
         border-bottom: 1px solid $hard-red;
       }
+    }
+
+    .project-items {
+      display: flex;
     }
   }
 </style>
