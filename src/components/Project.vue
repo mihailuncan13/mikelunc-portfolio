@@ -1,6 +1,6 @@
 <template lang="pug">
   .project(@click="handleGoToProject")
-    img.image(:src="require(`../assets/styles/images/${project.images[0].url}`)" alt="broken")
+    img.image(:src="require(`../assets/styles/images/${project.cover}`)" alt="broken")
     .layer
       .title {{ project.name }}
 </template>
@@ -26,6 +26,9 @@ export default {
         params: {
           projectId,
         },
+      });
+      window.scroll({
+        top: 0,
       });
     },
   }

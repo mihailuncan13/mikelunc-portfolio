@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import { textProjects, projects } from '@/utils/textUtil';
+import { textProjects } from '@/utils/textUtil';
+import { projects } from '@/utils/projectsUtil';
 import Project from '@/components/Project';
 
 export default {
