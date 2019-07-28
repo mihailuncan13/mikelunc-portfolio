@@ -7,10 +7,14 @@
       b-col(lg="8" md="11" sm="11")
         .title_big.mb-5
           span {{textProjects.about_big_text}}
-      b-col(lg="8" md="11" sm="11").mb-5
-        b-row(align-h="center")
-          .project-items(v-for="project in handleProjects")
-            Project(:project="project")
+    .project-wrapper.pb-5
+      .arrow(@click="scrollLeft")
+        font-awesome-icon(:icon="['fas', 'chevron-left']" size="lg")
+      .project-items
+        .item(v-for="project in handleProjects")
+          Project(:project="project")
+      .arrow(@click="scrollRight")
+        font-awesome-icon(:icon="['fas', 'chevron-right']" size="lg")
 
 </template>
 
@@ -35,6 +39,16 @@ export default {
     handleProjects() {
       return this.projects.slice(0, 8);
     }
+  },
+  methods: {
+    scrollLeft() {
+    let content = document.querySelector(".project-items");
+    content.scrollLeft -= 140;
+  },
+    scrollRight() {
+      let content = document.querySelector(".project-items");
+      content.scrollLeft += 140;
+    }
   }
 }
 </script>
@@ -55,9 +69,31 @@ export default {
         border-bottom: 1px solid $hard-red;
       }
     }
+  }
+
+  .project-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow {
+      padding: 1em;
+      cursor: pointer;
+      
+      &:hover {
+        color: $med-red;
+      }
+    }
 
     .project-items {
+      max-width: 90vw;
       display: flex;
+      overflow-x:scroll;  
+      white-space: nowrap;
+
+      .item {
+        margin: 2em;
+      }
     }
   }
 </style>
