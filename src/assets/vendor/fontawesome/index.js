@@ -6,8 +6,6 @@ import {
   faVideo,
   faLightbulb,
   faShoePrints,
-  faChevronLeft as fasChevronLeft,
-  faChevronRight as fasChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 
 import { 
@@ -23,8 +21,6 @@ library.add(fasCameraRetro);
 library.add(faVideo);
 library.add(faLightbulb);
 library.add(faShoePrints);
-library.add(fasChevronLeft);
-library.add(fasChevronRight);
 
 //brands
 library.add(fabTwitter);

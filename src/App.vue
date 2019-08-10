@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    Navigation(v-if="!hideNavOnProjectView")
+    Navigation
     router-view
 </template>
 
@@ -11,13 +11,6 @@ export default {
   name: 'App',
 
   components: { Navigation },
-
-  computed: {
-    hideNavOnProjectView() {
-      const routes = ['ProjectView'];
-      return routes.includes(this.$route.name);
-    },
-  }
 }
 </script>
 

@@ -1,11 +1,8 @@
 <template lang="pug">
   .project-view
     .wrapper
-      .go-back.mb-5(@click="goBack")
-        font-awesome-icon.icon(:icon="['fas', 'chevron-left']" size="lg")
-        span.ml-3 Go back
-      b-row
-        b-col.mb-5.carousel-images(lg="5" md="12" v-if="handleProject.images.length > 0")
+      b-row.mb-5
+        b-col.carousel-images(lg="5" md="12" v-if="handleProject.images.length > 0")
           .carousel
             b-carousel(
               v-model="carouselSlide"
@@ -22,6 +19,7 @@
         b-col(lg="5" md="12")
           .title {{handleProject.name}}
           .description.mt-5 {{handleProject.description}}
+      b-row
         b-col.video(lg="5" md="12" v-if="handleProject.video !== 'no-video'")
           b-embed(
             type="iframe"
@@ -56,12 +54,6 @@ export default {
       return obj;
     }
   },
-
-  methods: {
-    goBack() {
-      this.$router.push({ name: 'Home' });
-    }
-  }
 }
 </script>
 
@@ -69,7 +61,8 @@ export default {
 @import '../../assets/styles/include.scss';
 
   .project-view {
-
+    background-color: $black;
+    
     .wrapper {
       padding: 5em 4em 4em 4em;
       height: 100%;
@@ -87,17 +80,7 @@ export default {
       }
       .description {
         font-size: 20px;
-        color: $black;
-      }
-    }
-
-    .go-back {
-      cursor: pointer;
-      font-size: 18px;
-      color: $black;
-      span {
-        font-size: 24px;
-        font-weight: 500;
+        color: $white;
       }
     }
   }
