@@ -1,6 +1,6 @@
 export const textHome = {
   home_small_text: 'Welcome',
-  home_big_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  home_big_text: 'Lorem ipsum Ruff sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 }
 
 export const social = {

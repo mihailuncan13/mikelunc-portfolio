@@ -1,24 +1,24 @@
 export const projects = [
   {
     id: 1,
-    name: 'Lorem Ipsum 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    cover: 'cover.jpg',
+    name: 'Energobit',
+    description: 'Energobit Energobit Energobit Energobit',
+    cover: 'energobit/screen1.png',
     images: [
       {
-        url: 'cover.jpg',
+        url: 'energobit/screen1.png',
       },
       {
-        url: 'contact.jpg',
+        url: 'energobit/screen2.png',
       },
       {
-        url: 'cat.jpg',
+        url: 'energobit/screen3.png',
       },
-      {
-        url: 'bear.jpg',
+	  {
+        url: 'energobit/screen4.png',
       },
     ],
-    video: "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+    video: "https://www.youtube.com/embed/3CiaOr37RPY"
   },
   {
     id: 2,
@@ -132,5 +132,26 @@ export const projects = [
       }
     ],
     video: "no-video"
+  },
+    {
+    id: 1,
+    name: 'Lorem Ipsum 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    cover: 'cover.jpg',
+    images: [
+      {
+        url: 'cover.jpg',
+      },
+      {
+        url: 'contact.jpg',
+      },
+      {
+        url: 'cat.jpg',
+      },
+      {
+        url: 'bear.jpg',
+      },
+    ],
+    video: "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
   },
 ]
