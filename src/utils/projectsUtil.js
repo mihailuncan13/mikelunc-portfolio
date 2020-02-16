@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     name: 'Energobit',
-    description: 'Energobit Energobit Energobit Energobit',
+    description: 'Energobit Energobit Energobit Energobit da',
     cover: 'energobit/screen1.png',
     images: [
       {
