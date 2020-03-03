@@ -3,13 +3,13 @@
     Parallax(:sectionHeight="100")
       .parallax-img
     .logo
-      span Mike Lunc.
+      span Mike Lunc. Production
     .wrapper
       .small-text.mb-2
         span {{ textHome.home_small_text }}
       .big-text.mb-4
         span {{ textHome.home_big_text }}
-      b-button(@click="scrollTo('#contact', 1000)") Let's talk
+      b-button(@click="scrollTo('#contact', 1000)") Contact me
     Social(:isNavbar="false")
 </template>
 
@@ -49,7 +49,7 @@ export default {
   }
 
   .parallax-img {
-    background: url('../../assets/styles/images/cover.jpg');
+    background: url('../../assets/styles/images/Covers/cover_me1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: 100%; 

@@ -36,7 +36,7 @@ export default {
     position: relative;
 
     .cover {
-      background: url('../../assets/styles/images/contact.jpg');
+      background: url('../../assets/styles/images/Covers/cover_me2.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
