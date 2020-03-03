@@ -37,7 +37,7 @@ export default {
 
   computed: {
     handleProjects() {
-      return this.projects.slice(0, 8);
+      return this.projects.slice(0, 20);
     }
   },
 
