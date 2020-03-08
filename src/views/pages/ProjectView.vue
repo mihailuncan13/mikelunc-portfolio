@@ -5,11 +5,12 @@
         font-awesome-icon.icon(:icon="['fas', 'chevron-left']" size="lg")
         span.ml-3 Go back
       b-row
-        b-col.mb-5.carousel-images(lg="5" md="12" v-if="handleProject.images.length > 0")
+        b-col.mb-5.carousel-images(cols="12" v-if="handleProject.images.length > 0")
           .carousel
             b-carousel(
               v-model="carouselSlide"
-              :interval="4000"
+              :interval="3000"
+              :fade="true"
               controls
               indicators
             )
@@ -22,14 +23,13 @@
         b-col(lg="5" md="12")
           .title {{handleProject.name}}
           .description.mt-5 {{handleProject.description}}
-        b-col.video(lg="5" md="12" v-if="handleProject.video !== 'no-video'")
+        b-col.video(lg="7" md="12" v-if="handleProject.video !== 'no-video'")
           b-embed(
             type="iframe"
             aspect="16by9"
             :src="handleProject.video"
             allowfullscreen
           )
-    
 </template>
 
 <script>
@@ -48,7 +48,7 @@ export default {
   computed: {
     getId() {
       const { projectId } = this.$route.params;
-      return this.projectId = projectId
+      return projectId;
     },
 
     handleProject() {
@@ -59,7 +59,7 @@ export default {
 
   methods: {
     goBack() {
-      this.$router.push({ name: 'Home' });
+      this.$router.go(-1);
     }
   }
 }
@@ -72,24 +72,26 @@ export default {
     background-color: $black;
     min-height: 100vh;
     max-height: fit-content;
-    
+
     .wrapper {
-      padding: 5em 4em 4em 4em;
+      padding: 1em 4em 4em 4em;
       height: 100%;
-      
+
       @media screen and (max-width: $screen-width-s){
         padding: 5em 1em 1em 1em;
       }
-      
+
       .title {
-        font-size: 24px;
+        font-size: $font32;
         color: $white;
         font-weight: bold;
-        background-color: $primary-color-2;
+        background-color: $primary-color;
         padding: 20px
       }
+
       .description {
-        font-size: 20px;
+        font-size: $font24;
+        text-align: justify;
         color: $white;
       }
     }
@@ -98,6 +100,7 @@ export default {
       cursor: pointer;
       font-size: 18px;
       color: $primary-color-2;
+
       span {
         font-size: 24px;
         font-weight: 500;
@@ -108,10 +111,11 @@ export default {
 </style>
 
 <style lang="scss">
-  .carousel {
+@import '../../assets/styles/include.scss';
 
+  .carousel {
     &-images {
-      height: 47vh;
+      height: 70vh;
       overflow: hidden;
       position: relative;
 
@@ -121,6 +125,18 @@ export default {
         display: block;
         width: 100%;
         height: 100%;
+      }
+
+      @media screen and (max-width: $screen-width-xl){
+        height: 55vh;
+      }
+
+      @media screen and (max-width: $screen-width-l){
+        height: 45vh;
+      }
+
+      @media screen and (max-width: $screen-width-s){
+        height: 25vh;
       }
     }
 
