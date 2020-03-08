@@ -49,7 +49,7 @@ export default {
   }
 
   .parallax-img {
-    background: url('../../assets/styles/images/Covers/cover_me1.jpg');
+    background-image: linear-gradient(90deg, rgba(2,0,36,0.10) 0%, rgba(0,0,0,0.75) 100%), url('../../assets/styles/images/Covers/cover_me1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: 100%; 

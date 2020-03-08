@@ -85,7 +85,7 @@ export default {
         font-size: 24px;
         color: $white;
         font-weight: bold;
-        background-color: $med-red;
+        background-color: $primary-color-2;
         padding: 20px
       }
       .description {
@@ -97,7 +97,7 @@ export default {
     .go-back {
       cursor: pointer;
       font-size: 18px;
-      color: $med-red;
+      color: $primary-color-2;
       span {
         font-size: 24px;
         font-weight: 500;

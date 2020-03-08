@@ -39,16 +39,17 @@ export default {
     }
 
     .title_small {
-      color: $hard-red;
+      color: $primary-color;
     }
 
     .title_big {
       span {
-        border-bottom: 1px solid $hard-red;
+        border-bottom: 1px solid $primary-color;
       }
     }
 
     .text_info {
+      text-align: justify;
       font-size: $font24;
       @media screen and (max-width: $screen-width-l) {
         font-size: $font20;

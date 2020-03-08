@@ -46,7 +46,7 @@ export default {
     .title_big {
       span {
         padding: 20px;
-        border-bottom: 1px solid $hard-red;
+        border-bottom: 1px solid $primary-color;
       }
     }
 
@@ -70,13 +70,14 @@ export default {
         margin-left: auto; 
         margin-right: auto; 
         background-color: $black-op;
+        backdrop-filter: blur(3px);
         max-width: 600px;
         padding: 20px 40px;
 
         .title {
           font-size: $font24;
           font-weight: 500;
-          color: $hard-red;
+          color: $primary-color;
         }
 
         .info {

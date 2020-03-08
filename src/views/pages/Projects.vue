@@ -8,12 +8,12 @@
         .title_big.mb-5
           span {{textProjects.about_big_text}}
       .project-wrapper.pb-5
-        .arrow(@click="scrollLeft")
-          font-awesome-icon(:icon="['fas', 'chevron-left']" size="lg")
-        .project-items
+        .project-items#proj(ref="projectsRef")
           .item(v-for="project in handleProjects")
             Project(:project="project")
-        .arrow(@click="scrollRight")
+        button.arrow.left(@click="scrollLeft")
+          font-awesome-icon(:icon="['fas', 'chevron-left']" size="lg")
+        button.arrow.right(@click="scrollRight")
           font-awesome-icon(:icon="['fas', 'chevron-right']" size="lg")
 
 </template>
@@ -43,12 +43,28 @@ export default {
 
   methods: {
     scrollLeft() {
-      let content = document.querySelector(".project-items");
-      content.scrollLeft -= 140;
+      let content = this.$refs.projectsRef
+      this.sideScroll(content, 'left', 15, 220, 10)
     },
+
     scrollRight() {
-      let content = document.querySelector(".project-items");
-      content.scrollLeft += 140;
+      let content = this.$refs.projectsRef
+      this.sideScroll(content, 'right', 15, 220, 10)
+    },
+
+    sideScroll(element, direction, speed, distance, step) {
+      let scrollAmount = 0
+      const slideTimer = setInterval(function() {
+        if (direction == 'left') {
+          element.scrollLeft -= step
+        } else {
+          element.scrollLeft += step
+        }
+        scrollAmount += step
+        if (scrollAmount >= distance) {
+          window.clearInterval(slideTimer)
+        }
+      }, speed)
     }
   }
 }
@@ -67,7 +83,7 @@ export default {
 
     .title_big {
       span {
-        border-bottom: 1px solid $hard-red;
+        border-bottom: 1px solid $primary-color;
       }
     }
 
@@ -77,27 +93,42 @@ export default {
   }
 
   .project-wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .arrow {
-      padding: 1em;
+    button.arrow {
+      position: absolute;
+      padding: 10px 15px;
+      border: 0;
+      background-color: #0000003f;
+      color: #ffffff;
       cursor: pointer;
-      
+      font-size: 20px;
+      backdrop-filter: blur(5px);
+
       &:hover {
-        color: $med-red;
+        color: $primary-color-2;
+      }
+
+      &.right {
+        right: 20px;
+      }
+
+      &.left {
+        left: 20px;
       }
     }
 
     .project-items {
-      max-width: 90vw;
       display: flex;
       overflow-x:scroll;  
       white-space: nowrap;
 
       .item {
-        margin: 2em;
+        margin: 10px;
       }
     }
   }

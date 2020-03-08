@@ -45,7 +45,7 @@ export default {
 
     .title_big {
       span {
-        border-bottom: 1px solid $hard-red;
+        border-bottom: 1px solid $primary-color;
       }
     }
 

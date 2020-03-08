@@ -44,12 +44,16 @@ export default {
     .image {
       opacity: 1;
       flex: 1;
-      width: 30vh;
       height: 40vh;
       display: block;
       object-fit: cover;
       transition: .5s ease;
       backface-visibility: hidden;
+
+      @media screen and (max-width: $screen-width-s){
+      width: 50vw;
+      height: 30vh;
+      }
     }
 
     &:hover .image {

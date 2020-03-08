@@ -1,10 +1,9 @@
 <template lang="pug">
   b-col.service
     b-row.mb-5
-      b-col.icon(cols="1")
-        font-awesome-icon(:icon="service.logo")
       b-col
         .service-title
+          font-awesome-icon.icon(:icon="service.logo")
           span {{ service.title }}
         .description
           span {{ service.description }}
@@ -28,19 +27,21 @@ export default {
 
   .service {
     text-align: start;
-
-    .icon {
-      font-size: $font32;
-      color: $hard-red;
-      margin-right: 10px;
-    }
-
     .service-title {
       font-size: $font32;
       font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        font-size: $font32;
+        color: $primary-color;
+        margin-right: 10px;
+      }
     }
 
     .description {
+      text-align: justify;
       color: $gray;
     }
   }

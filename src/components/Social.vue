@@ -38,7 +38,7 @@ export default {
     padding: 10px 0;
     cursor: pointer;
     &:hover {
-      color: $hard-red;
+      color: $primary-color;
       transition: 0.2s ease-in;
     }
   }
