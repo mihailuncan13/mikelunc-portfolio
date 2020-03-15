@@ -59,7 +59,7 @@ export const textContact = {
   about_big_text: "Let's create together!",
   card_title: 'This is how to get in contact',
   address: 'Address: Sub Cetate nr. 4, Cluj, Floresti, Romania - Working globally',
-  phone: 'Phone: +40 734 660 945',
-  email: 'Email: mihailuncan13@gmail.com',
+  phone: '+40 734 660 945',
+  email: 'mihailuncan13@gmail.com',
 }
 

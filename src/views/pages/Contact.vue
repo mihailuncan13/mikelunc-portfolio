@@ -10,9 +10,11 @@
           .info.mb-4
             span {{ textContact.address }}
           .info.mb-4
-            span {{ textContact.phone }}
+            span Phone: 
+            a(href = "tel:+40 734 660 945") {{ textContact.phone }}
           .info.mb-4
-            span {{ textContact.email }}
+            span Email: 
+            a(href = "mailto: mihailuncan13@gmail.com") {{ textContact.email }}
 </template>
 
 <script>
@@ -64,11 +66,11 @@ export default {
       }
 
       .contact-card {
-        position: absolute; 
-        left: 0; 
-        right: 0; 
-        margin-left: auto; 
-        margin-right: auto; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         background-color: $black-op;
         backdrop-filter: blur(3px);
         max-width: 600px;
@@ -82,6 +84,14 @@ export default {
 
         .info {
           text-align: start;
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
         }
       }
     }
