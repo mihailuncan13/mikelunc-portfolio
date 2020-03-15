@@ -3,7 +3,7 @@
     Parallax(:sectionHeight="100")
       .parallax-img
     .logo
-      span Mike Lunc. Production
+      b-img(:src="require('../../assets/styles/images/logo.png')")
     .wrapper
       .small-text.mb-2
         span {{ textHome.home_small_text }}
@@ -43,29 +43,41 @@ export default {
 
   .logo {
     position: absolute;
-    font-size: $font20;
     top: 36px;
     left: 36px;
+
+    @media screen and (max-width: $screen-width-l) {
+      top: 36px;
+      left: 20px;
+    }
+
+    img {
+      width: 100px;
+
+      @media screen and (max-width: $screen-width-s) {
+        width: 80px;
+      }
+    }
   }
 
   .parallax-img {
     background-image: linear-gradient(90deg, rgba(2,0,36,0.10) 0%, rgba(0,0,0,0.75) 100%), url('../../assets/styles/images/Covers/cover_me1.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
     height: 100%;
     background-size: cover;
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
 
   .wrapper {
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 15%;
     max-width: 40%;
 
@@ -84,14 +96,9 @@ export default {
       text-align: start;
       @include smaller-font();
     }
-    @media screen and (max-width: $screen-width-l) {
-      top: 10%;
-      left: 20px;
-      max-width: 90%;
-    }
 
-    @media screen and (max-width: $screen-width-s) {
-      top: 20%;
+    @media screen and (max-width: $screen-width-l) {
+      top: 50%;
       left: 20px;
       max-width: 90%;
     }
