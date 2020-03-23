@@ -14,35 +14,35 @@ export const projects = [
       {
         url: 'Ford_Romania/screen3_ford.jpg',
       },
-	  {
+	    {
         url: 'Ford_Romania/screen4_ford.jpg',
       },
     ],
     video: "https://www.youtube.com/embed/hvlBCAXSTpA"
   },
-  
+
   {
     id: 2,
     name: 'Energobit',
     description: 'Energobit wanted to introduce their offering - from conception to the end product. The secret driver of this project was the idea that the production machines are only as good as the people that steer them. We aspire to create a story that shows this balance between robots and human. The video was shot in the Energobit Cluj Factory in 2019',
     cover: 'Energobit/screen3_energo.jpg',
     images: [
-      {
-        url: 'Energobit/screen1_energo.jpg',
-      },
-      {
-        url: 'Energobit/screen2_energo.jpg',
-      },
-      {
-        url: 'Energobit/screen3_energo.jpg',
-      },
-	  {
-        url: 'Energobit/screen4_energo.jpg',
-      },
+      // {
+      //   url: 'Energobit/screen1_energo.jpg',
+      // },
+      // {
+      //   url: 'Energobit/screen2_energo.jpg',
+      // },
+      // {
+      //   url: 'Energobit/screen3_energo.jpg',
+      // },
+	    // {
+      //   url: 'Energobit/screen4_energo.jpg',
+      // },
     ],
     video: ""
   },
-  
+
   {
     id: 3,
     name: 'Napoca Rally Academy 2019 Recap',
