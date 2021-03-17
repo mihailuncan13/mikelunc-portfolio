@@ -1,7 +1,8 @@
 <template lang="pug">
   .home
     Parallax(:sectionHeight="100")
-      .parallax-img
+      video(autoplay muted loop id="myVideo")
+        source(:src="require('../../assets/styles/video/home_video.mp4')" type="video/mp4")
     .logo
       b-img(:src="require('../../assets/styles/images/logo.png')")
     .wrapper
@@ -41,6 +42,11 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/styles/include.scss';
 
+  video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
   .logo {
     position: absolute;
     top: 36px;
@@ -60,20 +66,20 @@ export default {
     }
   }
 
-  .parallax-img {
-    background-image: linear-gradient(90deg, rgba(2,0,36,0.10) 0%, rgba(0,0,0,0.75) 100%), url('../../assets/styles/images/Covers/cover_me1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    height: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+  // .parallax-img {
+  //   background-image: linear-gradient(90deg, rgba(2,0,36,0.10) 0%, rgba(0,0,0,0.75) 100%), url('../../assets/styles/images/Covers/cover_me1.jpg');
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   -webkit-background-size: 100%;
+  //   -moz-background-size: 100%;
+  //   -o-background-size: 100%;
+  //   height: 100%;
+  //   background-size: cover;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  // }
 
   .wrapper {
     position: absolute;
