@@ -52,14 +52,14 @@ export const services = [
 
 export const textProjects = {
   about_small_text: 'What have we done so far?',
-  about_big_text: 'A brief introduction of our Projects',
+  about_big_text: 'Our Projects',
 }
 
 export const textContact = {
   about_big_text: "Let's create together!",
   card_title: 'This is how to get in contact',
-  address: 'Address: Sub Cetate nr. 4, Cluj, Floresti, Romania - Working globally',
+  address: 'Address: Sub Cetate nr. 6, Cluj, Floresti, Romania - working GLOBALLY',
   phone: '+40 734 660 945',
-  email: 'mihailuncan13@gmail.com',
+  email: 'mihailuncan@mikeluncproduction.com',
 }
 

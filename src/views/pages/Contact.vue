@@ -14,7 +14,7 @@
             a(href = "tel:+40 734 660 945") {{ textContact.phone }}
           .info.mb-4
             span Email: 
-            a(href = "mailto: mihailuncan13@gmail.com") {{ textContact.email }}
+            a(href = "mailto: mihailuncan@mikeluncproduction.com") {{ textContact.email }}
 </template>
 
 <script>
