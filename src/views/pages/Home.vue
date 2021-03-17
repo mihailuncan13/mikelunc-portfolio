@@ -1,8 +1,9 @@
 <template lang="pug">
   .home
     Parallax(:sectionHeight="100")
-      video(autoplay muted loop id="myVideo")
-        source(:src="require('../../assets/styles/video/home_video.mp4')" type="video/mp4")
+      .video-wrapper
+        video(autoplay muted loop id="myVideo")
+          source(:src="require('../../assets/styles/video/home_video.mp4')" type="video/mp4")
     .logo
       b-img(:src="require('../../assets/styles/images/logo.png')")
     .wrapper
@@ -42,9 +43,16 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/styles/include.scss';
 
-  video {
-    min-width: 100%;
-    min-height: 100%;
+  .video-wrapper {
+    display: flex;
+    justify-content: center;
+
+    video {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      min-width: 100%;
+    }
   }
 
   .logo {
